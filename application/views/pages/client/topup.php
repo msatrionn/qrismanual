@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.css" integrity="sha512-DkOTFL3mBrpwoH8ESok7Laa3spjRgLCU8GXtVDvRvF/9Zqcy90f6ubFkd22SvdGzSlrPhREuiccMjsP9aaBbPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<title>Hello, world!</title>
+	<title>QRIS</title>
   </head>
   <body>
 	  <style>
