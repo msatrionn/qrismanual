@@ -14,13 +14,8 @@ class Home extends CI_Controller {
 	}
 
 	public function pembayaran($id){
-		if ($this->session->userdata('id') != null) {
 		$data['pembayaran']=$this->model->get_pembayaran_id('pembayaran',$id);
 		$this->load->view('pages/client/pembayaran',$data);
-		}else{
-			redirect('admin/login');
-		}
-		
 	}
 	
 	public function topup(){

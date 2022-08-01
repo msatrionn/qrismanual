@@ -39,9 +39,12 @@
 					<li class="nav-item">
 					<a class="nav-link " href="<?= base_url('home/about') ?>">Tetang kami</a>
 					</li>
+					<?php
+					if ($this->session->userdata('id')!= null) {?>
 					<li class="nav-item">
-					<a class="nav-link " href="<?= base_url('admin/logout') ?>">Logout</a>
+					<a class="nav-link " href="<?= base_url('login/logout') ?>">Logout</a>
 					</li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>

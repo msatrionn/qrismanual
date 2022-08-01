@@ -131,7 +131,7 @@ class Transaksi extends CI_Controller {
 				];
 				$this->model->updated_data($id, 'transaksi', $data);
 			}
-			redirect('home/topup');
+			// redirect('home/topup');
 		}
 		else{
 			redirect('admin/login');

@@ -39,9 +39,12 @@
 					<li class="nav-item">
 					<a class="nav-link " href="<?= base_url('home/about') ?>">Tetang kami</a>
 					</li>
+					<?php
+					if ($this->session->userdata('id')!= null) {?>
 					<li class="nav-item">
 					<a class="nav-link " href="<?= base_url('login/logout') ?>">Logout</a>
 					</li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>
@@ -110,9 +113,9 @@
 				</div>
 				</div>
 					<?php if ($value->status=="lunas") {?>
-						<a href="<?= base_url('assets/file/transaksi/'.$value->bukti_transfer) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download</a>
+						<a href="<?= base_url('assets/file/transaksi/'.$value->bukti_transfer) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download Bukti</a>
 					<?php }elseif(($value->status=="proses")) {?>
-						<a href="<?= base_url('assets/file/transaksi/'.$value->bukti_transfer) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download</a>
+						<a href="<?= base_url('assets/file/transaksi/'.$value->bukti_transfer) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download Bukti</a>
 						<form action="<?= base_url('transaksi/update_file') ?>" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col form-group">
@@ -125,8 +128,8 @@
 							</div>
 						</form>
 					<?php }else{?>
-						<a href="" class="btn btn-danger" style="margin-left: 10px;" onclick="alert('Anda belum upload bukti')" >Download</a>
-						<form action="<?= base_url('transaksi/update_file') ?>" method="POST" enctype="multipart/form-data">
+						<a href="" class="btn btn-danger" style="margin-left: 10px;" onclick="alert('Anda belum upload bukti')" >Download Bukti</a>
+						<form action="<?= base_url('transaksi/`update_file`') ?>" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col form-group">
 									<input type="hidden" name="id_transaksi" value="<?= $value->id_transaksi ?>">
