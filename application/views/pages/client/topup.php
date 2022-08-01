@@ -143,6 +143,7 @@
 					<?php } ?>
 			<?php } ?>
 		</ol>
+		<p style="color: red;"><i>*file harus berupa jpg/jpeg/png</i></p>
 	</div>
 	</section>
 	<section>

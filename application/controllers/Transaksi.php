@@ -41,7 +41,7 @@ class Transaksi extends CI_Controller {
 	public function save(){
 	if ($this->session->userdata('id') != null) {
 		$config['upload_path'] = './assets/file/transaksi';
-		$config['allowed_types'] = 'jpg|png|jpeg';
+		$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 		$config['max_size'] = 3000;
 		$config['file_name'] = date('y-m-d:h:m:s').$_FILES['bukti_transfer']['name']; 
 
@@ -75,7 +75,7 @@ class Transaksi extends CI_Controller {
 		if ($this->session->userdata('id') != null) {
 			$id=$this->input->post('id_transaksi');
 			$config['upload_path'] = './assets/file/transaksi';
-			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 			$config['max_size'] = 3000;
 			$config['file_name'] = date('y-m-d:h:m:s').$_FILES['bukti_transfer']['name']; 
 			$data['post']=$this->model->get_edit($id);
