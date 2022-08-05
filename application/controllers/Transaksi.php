@@ -43,7 +43,7 @@ class Transaksi extends CI_Controller {
 		$config['upload_path'] = './assets/file/transaksi';
 		$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 		$config['max_size'] = 3000;
-		$config['file_name'] = date('y-m-d:h:m:s').$_FILES['bukti_transfer']['name']; 
+		$config['file_name'] = str_replace(" ","_",date('y-m-d_h_m_s').$_FILES['bukti_transfer']['name']); 
 
 		$this->load->library('upload', $config);
 
@@ -77,13 +77,13 @@ class Transaksi extends CI_Controller {
 			$config['upload_path'] = './assets/file/transaksi';
 			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 			$config['max_size'] = 3000;
-			$config['file_name'] = date('y-m-d:h:m:s').$_FILES['bukti_transfer']['name']; 
+			$config['file_name'] = str_replace(" ","_",date('y-m-d_h_m_s').$_FILES['bukti_transfer']['name']); 
 			$data['post']=$this->model->get_edit($id);
 			if ($_FILES['bukti_transfer']['name']) {
 				$config['upload_path'] = './assets/file/transaksi';
 				$config['allowed_types'] = 'jpg|png|jpeg';
 				$config['max_size'] = 3000;
-				$config['file_name'] = date('y-m-d:h:m:s').$_FILES['bukti_transfer']['name']; 
+				$config['file_name'] = str_replace(" ","_",date('y-m-d_h_m_s').$_FILES['bukti_transfer']['name']); 
 				$this->load->library('upload', $config);
 	
 				if(file_exists(FCPATH.'assets/file/transaksi/'.$data['post']->bukti_transfer)){
@@ -91,7 +91,6 @@ class Transaksi extends CI_Controller {
 					if (!$this->upload->do_upload('bukti_transfer')) {
 						$error = array('error' => $this->upload->display_errors());
 					} else {
-						
 						$data = [
 							'bukti_transfer' => $config['file_name'],
 							'status' => "proses",
@@ -106,7 +105,7 @@ class Transaksi extends CI_Controller {
 					$config['upload_path'] = './assets/file/transaksi/';
 					$config['allowed_types'] = 'jpg|png|jpeg';
 					$config['max_size'] = 3000;
-					$config['file_name'] = date('y-m-d:h:m:s').$_FILES['bukti_transfer']['name']; 
+					$config['file_name'] = str_replace(" ","_",date('y-m-d_h_m_s').$_FILES['bukti_transfer']['name']); 
 					$this->load->library('upload', $config);
 	
 					if (!$this->upload->do_upload('bukti_transfer')) {
@@ -131,7 +130,7 @@ class Transaksi extends CI_Controller {
 				];
 				$this->model->updated_data($id, 'transaksi', $data);
 			}
-			// redirect('home/topup');
+			redirect('home/topup');
 		}
 		else{
 			redirect('admin/login');

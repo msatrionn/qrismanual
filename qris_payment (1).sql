@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jul 29, 2022 at 01:02 AM
+-- Generation Time: Aug 01, 2022 at 10:35 AM
 -- Server version: 5.7.34
 -- PHP Version: 8.0.8
 
@@ -65,9 +65,10 @@ CREATE TABLE `transaksi` (
 INSERT INTO `transaksi` (`id_transaksi`, `pembayaran_id`, `user_id`, `no_jenis_transaksi`, `jumlah_bayar`, `bukti_transfer`, `status`) VALUES
 (1, 3, 2, '1433223423', 10000, '22-07-28:02:07:23bananas.jpg', 'lunas'),
 (8, 3, 2, '43232423', 10000, '22-07-28:02:07:28borobudur1.jpeg', 'proses'),
-(9, 4, 3, '2384832423', 10000, '22-07-28:03:07:29white-bunch-food-nature-fruit.jpg', 'proses'),
-(10, 4, 2, '432334232', 25000, '22-07-29:12:07:22ria.jpeg', 'proses'),
-(11, 4, 2, '55555', 25000, '22-07-29:12:07:14payment.jpg', 'proses');
+(9, 4, 3, '2384832423', 10000, '22-07-29:07:07:30bananas.jpg', 'proses'),
+(10, 4, 2, '432334232', 25000, '22-08-01:10:08:12lesti.jpeg', 'proses'),
+(11, 4, 2, '55555', 25000, '22-07-29:12:07:14payment.jpg', 'proses'),
+(12, 4, 2, '6757657', 10000, '22-08-01:10:08:56innovation.png', 'proses');
 
 -- --------------------------------------------------------
 
@@ -131,7 +132,7 @@ ALTER TABLE `pembayaran`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`

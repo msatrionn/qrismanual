@@ -113,9 +113,9 @@
 				</div>
 				</div>
 					<?php if ($value->status=="lunas") {?>
-						<a href="<?= base_url('assets/file/transaksi/'.$value->bukti_transfer) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download Bukti</a>
+						<a href="<?= base_url('assets/file/transaksi/'.str_replace(" ","_",$value->bukti_transfer)) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download Bukti</a>
 					<?php }elseif(($value->status=="proses")) {?>
-						<a href="<?= base_url('assets/file/transaksi/'.$value->bukti_transfer) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download Bukti</a>
+						<a href="<?= base_url('assets/file/transaksi/'.str_replace(" ","_",$value->bukti_transfer)) ?>" class="btn btn-danger" style="margin-left: 10px;" target="_blank">Download Bukti</a>
 						<form action="<?= base_url('transaksi/update_file') ?>" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col form-group">

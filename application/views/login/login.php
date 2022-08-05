@@ -48,11 +48,11 @@
                                         <div class="form-group">
                                             <input type="text" name="username"  class="form-control form-control-user"
                                                 id="exampleInputUsername" aria-describedby="UsernameHelp"
-                                                placeholder="Enter Username Address...">
+                                                placeholder="Enter Username Address..." required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                                id="exampleInputPassword" placeholder="Password" required>
                                         </div>
                                       
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -63,9 +63,9 @@
 									<?php if ($this->session->flashdata('msg')) { ?>
 										<div class="alert alert-danger"> <?= $this->session->flashdata('msg') ?> </div>
 									<?php } ?>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="register.html">Buat Akun</a>
-                                    </div> -->
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url('admin/register') ?>">Buat Akun</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

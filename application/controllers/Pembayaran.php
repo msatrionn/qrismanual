@@ -31,7 +31,7 @@ class Pembayaran extends CI_Controller {
 		$config['upload_path'] = './assets/file/pembayaran';
 		$config['allowed_types'] = 'jpg|png|jpeg';
 		$config['max_size'] = 3000;
-		$config['file_name'] = date('y-m-d:h:m:s').$_FILES['qris']['name']; 
+		$config['file_name'] = date('y-m-d_h_m_s')."image"; 
 
 		$this->load->library('upload', $config);
 
@@ -73,13 +73,13 @@ class Pembayaran extends CI_Controller {
 			$config['upload_path'] = './assets/file/pembayaran';
 			$config['allowed_types'] = 'jpg|png|jpeg';
 			$config['max_size'] = 3000;
-			$config['file_name'] = date('y-m-d:h:m:s').$_FILES['qris']['name']; 
+			$config['file_name'] = date('y-m-d_h_m_s')."image"; 
 			$data['post']=$this->model->get_edit($id);
 			if ($_FILES['qris']['name']) {
 				$config['upload_path'] = './assets/file/pembayaran';
 				$config['allowed_types'] = 'jpg|png|jpeg';
 				$config['max_size'] = 3000;
-				$config['file_name'] = date('y-m-d:h:m:s').$_FILES['qris']['name']; 
+				$config['file_name'] = date('y-m-d_h_m_s')."image"; 
 				$this->load->library('upload', $config);
 	
 				if(file_exists(FCPATH.'assets/file/pembayaran/'.$data['post']->qris)){
@@ -103,7 +103,7 @@ class Pembayaran extends CI_Controller {
 					$config['upload_path'] = './assets/file/pembayaran/';
 					$config['allowed_types'] = 'jpg|png|jpeg';
 					$config['max_size'] = 3000;
-					$config['file_name'] = date('y-m-d:h:m:s').$_FILES['qris']['name']; 
+					$config['file_name'] = date('y-m-d_h_m_s')."image"; 
 					$this->load->library('upload', $config);
 	
 					if (!$this->upload->do_upload('qris')) {

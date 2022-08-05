@@ -48,24 +48,24 @@
                                         <div class="form-group">
                                             <input type="email" name="email"  class="form-control form-control-user"
                                                 aria-describedby=""
-                                                placeholder="Email">
+                                                placeholder="Email" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" name="username"  class="form-control form-control-user"
                                                 aria-describedby=""
-                                                placeholder="Username">
+                                                placeholder="Username" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                placeholder="Password">
+                                                placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" name="alamat" class="form-control form-control-user"
-                                                placeholder="Alamat">
+                                                placeholder="Alamat" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" name="no_telp" class="form-control form-control-user"
-                                                placeholder="No Telpon">
+                                                placeholder="No Telpon" required>
                                         </div>
                                       
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -76,9 +76,9 @@
 									<?php if ($this->session->flashdata('msg')) { ?>
 										<div class="alert alert-success"> <?= $this->session->flashdata('msg') ?> </div>
 									<?php } ?>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="register.html">Buat Akun</a>
-                                    </div> -->
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url('admin/login') ?>">Login</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -34,7 +34,12 @@
 					<a class="nav-link active" aria-current="page" href="<?= base_url('home/index') ?>">Beranda</a>
 					</li>
 					<li class="nav-item">
-					<a class="nav-link " href="<?= base_url('home/topup') ?>">Top Up</a>
+					<?php
+						if ($this->session->userdata('id')==null) {?>
+							<a class="nav-link " href="<?= base_url('home/topup') ?>" onclick="alert('login dulu')" >Top Up</a>
+						<?php }else{ ?>
+							<a class="nav-link " href="<?= base_url('home/topup') ?>" >Top Up</a>
+						<?php  } ?>
 					</li>
 					<li class="nav-item">
 					<a class="nav-link " href="<?= base_url('home/about') ?>">Tetang kami</a>
@@ -65,7 +70,11 @@
 								<h5 class="card-title"><?= $value->nama_pembayaran ?></h5>
 								<p class="card-text"><?= $value->deskripsi ?></p>
 							</div>
+							<?php if ($this->session->userdata('id')==null) {?>
+								<a href="<?= base_url('home/pembayaran/'.$value->id) ?>" class="btn btn-primary" style="width: 50%; margin:10px auto"  onclick="alert('login dulu')">Topup</a>
+							<?php }else{ ?>
 								<a href="<?= base_url('home/pembayaran/'.$value->id) ?>" class="btn btn-primary" style="width: 50%; margin:10px auto">Topup</a>
+							<?php  } ?>
 							</div>
 						</div>
 						<?php } ?>
